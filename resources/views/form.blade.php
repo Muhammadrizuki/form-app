@@ -19,8 +19,13 @@
         }
         .form-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: #343a40;
+        }
+        .form-reminder{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c02626;
         }
         .btn-primary {
             background-color: #343a40;
@@ -37,6 +42,7 @@
 <body>
     <div class="container">
         <h1 class="form-title">MD Final Project Form</h1>
+        <h5 class="form-reminder">*Each NIM can only submit once</h5>
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
