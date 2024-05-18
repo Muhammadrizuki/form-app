@@ -35,7 +35,11 @@
             background-color: #fff;
             border-color: #343a40;
             color: #000;
-
+        }
+        .form-credit{
+            text-align: center;
+            margin-top: 20px;
+            border-color: #343a40;
         }
     </style>
 </head>
@@ -87,6 +91,7 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
+        <p class="form-credit">© 99% Created by ChatGPT3.5</p>
     </div>
 
     <!-- Bootstrap JS and dependencies -->

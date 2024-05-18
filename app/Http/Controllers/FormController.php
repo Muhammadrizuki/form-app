@@ -7,7 +7,7 @@ use App\Models\FormEntry;
 
 class FormController extends Controller
 {
-    // Add tema and the limits
+    //Add tema and the limits
     protected $temaLimits = [
         'Health' => 15,
         'Sports' => 15,
@@ -38,7 +38,7 @@ class FormController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'nim' => 'required|string|max:20|regex:/^[0-9a-zA-Z]+$/|unique:form_entries,nim',
-            'tema' => 'required|string|in:Tema 1,Tema 2,Tema 3',
+            'tema' => 'required|string|in:Health, Sports, Education, E-commerce, News, Anime',
             'api_link' => 'required|url|max:255',
             'github_link' => 'required|url|max:255',
         ]);
