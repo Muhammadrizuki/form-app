@@ -7,6 +7,7 @@ use App\Models\FormEntry;
 
 class FormController extends Controller
 {
+    // Add tema and the limits
     protected $temaLimits = [
         'Health' => 15,
         'Sports' => 15,
