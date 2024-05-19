@@ -36,6 +36,9 @@
             border-color: #343a40;
             color: #000;
         }
+        .nav-link{
+            text-align: center;
+        }
         .form-credit{
             text-align: center;
             margin-top: 20px;
@@ -74,6 +77,15 @@
                 <input type="text" name="nim" class="form-control" value="{{ old('nim') }}" required>
             </div>
             <div class="form-group">
+                <label for="lab">Lab:</label>
+                <select name="lab" class="form-control" required>
+                    <option value="A" {{ old('lab') == 'A' ? 'selected' : '' }}>A</option>
+                    <option value="B" {{ old('lab') == 'B' ? 'selected' : '' }}>B</option>
+                    <option value="C" {{ old('lab') == 'C' ? 'selected' : '' }}>C</option>
+                    <option value="D" {{ old('lab') == 'D' ? 'selected' : '' }}>D</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="tema">Theme:</label>
                 <select name="tema" class="form-control" required>
                     @foreach ($availableTemas as $tema => $limit)
@@ -91,6 +103,9 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
         </form>
+
+        <p class="nav-link">Already submiting? Check your submission <a href="{{ route('form.entries') }}">here!</a> </p>
+
         <p class="form-credit">© 99% Created by ChatGPT3.5</p>
     </div>
 

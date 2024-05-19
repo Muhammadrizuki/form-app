@@ -41,6 +41,7 @@ class FormController extends Controller
             'tema' => 'required|string|in:Health, Sports, Education, E-commerce, News, Anime',
             'api_link' => 'required|url|max:255',
             'github_link' => 'required|url|max:255',
+            'lab' => 'required|string|in:A,B,C,D'
         ]);
 
         // Check if the selected tema has reached the limit
