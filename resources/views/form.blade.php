@@ -86,6 +86,10 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="judul">App Title:</label>
+                <input type="text" name="judul" class="form-control" value="{{ old('judul') }}" required>
+            </div>
+            <div class="form-group">
                 <label for="tema">Theme:</label>
                 <select name="tema" class="form-control" required>
                     @foreach ($availableTemas as $tema => $limit)

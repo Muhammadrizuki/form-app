@@ -17,6 +17,7 @@
                     <th>Name</th>
                     <th>NIM</th>
                     <th>LAB</th>
+                    <th>App Title</th>
                     <th>Theme</th>
                     <th>API Link</th>
                     <th>GitHub Link</th>
@@ -29,9 +30,10 @@
                     <td>{{ $formEntry->nama }}</td>
                     <td>{{ $formEntry->nim }}</td>
                     <td>{{ $formEntry->lab }}</td>
+                    <td>{{ $formEntry->judul }}</td>
                     <td>{{ $formEntry->tema }}</td>
-                    <td><a href="{{ $formEntry->api_link }}" target="_blank">{{ $formEntry->api_link }}</a></td>
-                    <td><a href="{{ $formEntry->github_link }}" target="_blank">{{ $formEntry->github_link }}</a></td>
+                    <td><a href="{{ $formEntry->api_link }}" target="_blank">link</a></td>
+                    <td><a href="{{ $formEntry->github_link }}" target="_blank">link</a></td>
                 </tr>
                 @endforeach
             </tbody>

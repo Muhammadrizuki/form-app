@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class FormEntry extends Model
 {
     use HasFactory;
-    protected $fillable = ['nama', 'nim', 'tema', 'api_link', 'github_link', 'tema_count', 'lab'];
+    protected $fillable = ['nama', 'nim', 'tema', 'api_link', 'github_link', 'tema_count', 'lab', 'judul'];
 }
