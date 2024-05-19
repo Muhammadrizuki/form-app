@@ -9,15 +9,21 @@ class FormController extends Controller
 {
     //Add tema and the limits
     protected $temaLimits = [
-        'Health' => 12,
-        'Sports' => 12,
-        'Education' => 12,
-        'E-Commerce' => 12,
-        'News' => 12,
-        'Entertaiment' => 12,
-        'Finance' => 12,
-        'Travel' => 12,
-        'Environtment' => 12,
+        'Health' => 7,
+        'Sports' => 7,
+        'Education' => 7,
+        'E-Commerce' => 7,
+        'News' => 7,
+        'Entertaiment' => 7,
+        'Finance' => 7,
+        'Travel' => 7,
+        'Environtment' => 7,
+        'Culinary' => 7,
+        'Fashion' => 7,
+        'Lifestyle' => 7,
+        'Literature' => 7,
+        'Spirituality' => 7,
+        'Astronomy' => 7,
     ];
 
     public function create()
@@ -41,7 +47,7 @@ class FormController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'nim' => 'required|string|max:20|regex:/^[0-9a-zA-Z]+$/|unique:form_entries,nim',
-            'tema' => 'required|string|in:Health, Sports, Education, E-commerce, News, Entertaiment, Finance, Travel, Environtment',
+            'tema' => 'required|string|in:'. implode(',', array_keys($this->temaLimits)),
             'api_link' => 'required|url|max:255',
             'github_link' => 'required|url|max:255',
             'lab' => 'required|string|in:A,B,C,D',

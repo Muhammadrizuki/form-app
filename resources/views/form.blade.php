@@ -30,8 +30,9 @@
         .btn-primary {
             background-color: #343a40;
             border-color: #343a40;
+            
         }
-        .btn-primary:hover{
+        .btn-primary:hover, .btn-primary:active {
             background-color: #fff;
             border-color: #343a40;
             color: #000;
@@ -45,6 +46,14 @@
             border-color: #343a40;
         }
     </style>
+     <script>
+        function validateForm(event) {
+            if (!confirm("WARNING! After submiting you can't change any data you already submited, are you sure want to submit?")) {
+                return false; // Cancels the form submission
+            }
+            return true; // Allows the form submission
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -66,7 +75,7 @@
             </div>
         @endif
 
-        <form action="{{ route('form.store') }}" method="POST">
+        <form action="{{ route('form.store') }}" method="POST" onsubmit="return validateForm(event)">
             @csrf
             <div class="form-group">
                 <label for="nama">Name:</label>

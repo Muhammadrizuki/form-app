@@ -6,6 +6,11 @@
     <title>Form Entries</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        td, th{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-5">
@@ -32,8 +37,8 @@
                     <td>{{ $formEntry->lab }}</td>
                     <td>{{ $formEntry->judul }}</td>
                     <td>{{ $formEntry->tema }}</td>
-                    <td><a href="{{ $formEntry->api_link }}" target="_blank">link</a></td>
-                    <td><a href="{{ $formEntry->github_link }}" target="_blank">link</a></td>
+                    <td class="center"><a href="{{ $formEntry->api_link }}" target="_blank">link</a></td>
+                    <td class="center"><a href="{{ $formEntry->github_link }}" target="_blank">link</a></td>
                 </tr>
                 @endforeach
             </tbody>
